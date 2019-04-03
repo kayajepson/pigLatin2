@@ -1,11 +1,11 @@
 function checkSentence(sentence) {
   var wordArray = sentence.split(" "); //takes user input and splits into individual words
-  console.log(wordArray);
+  // console.log(wordArray);
   var latinSentence = ""; //creates a variable for the for loop
   for (var i = 0; i < wordArray.length; i++) {
     latinSentence = checkWord(wordArray[i])
     latinSentence += " "; //adds space between each word
-    console.log(latinSentence);
+    // console.log(latinSentence);
   }
 
   return latinSentence
@@ -14,8 +14,19 @@ function checkSentence(sentence) {
 function checkWord(word) {
 //pig laten word stuff
 
+if ((word.length === 1) && (word[0].includes("a")) ||(word.length === 1) && (word[0].includes("e")) || (word.length === 1) && (word[0].includes("i")) || (word.length === 1) && (word[0].includes("o")) || (word.length === 1) && (word[0].includes("u"))) {
+  console.log(word + "ay");
+} else if ((word[0].includes("a")) || (word[0].includes("e")) || (word[0].includes("i")) || (word[0].includes("o")) || (word[0].includes("u"))) {
+console.log(word + "way");
+  // else if {
+  // console.log("false"); //everything that is not a vowel.
+  // }
+
+  }
   return word
 }
+
+
 
 
 // jQuery user interface logic here.
@@ -31,7 +42,6 @@ $(document).ready(function() {
 
 
     var latin = checkSentence($("input#words").val());
-    console.log(latin);
     $(".words").text(latin);
     $("#output").show();
     // $("input#words").each(function(){
