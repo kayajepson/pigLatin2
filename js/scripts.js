@@ -22,25 +22,29 @@ $(document).ready(function() {
     // console.log(input);
     // var result = translate(sentence);
     var sentence = [];
+    var firstThree = [];
     $("input#words").each(function(){
     var wordArray = $(this).val().split(" ");
-    var char = $(this).val().split("",3);
+
     // wordArray = (val);
     sentence.push(wordArray);
-    console.log(wordArray);
-    console.log(char);
+    console.log(sentence);
+    var char = sentence.slice(0,2);
+    firstThree.push(char);
+    console.log(firstThree);
+    // console.log(wordArray);
+    // console.log(char);
 
   });
 
-  for (var index = 0; index < sentence.length; index ++) {
+  for (var index = 0; index < char.length; index ++) {
     for(var i = 0; i < 3; i++){
-      var holdWord = sentence[index];
-      holdWord = holdWord.slice();
-      var arr = sentence.split("");
-      console.log(arr);
+      var char = sentence.slice(0,2);
+      firstThree.push(char);
+      console.log(firstThree);
     };
-    var letterArray = $(this).val().split("",3);
-    console.log(letterArray);
+    // var letterArray = $(this).val().split("",3);
+    // console.log(letterArray);
   }
 
     $(".words").text(sentence);
