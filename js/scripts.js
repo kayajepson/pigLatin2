@@ -1,32 +1,21 @@
-// var consonant = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
-var vowels = ["a", "e", "i", "o", "u"];
-var exceptions = ["qu"];
-var translate = function(sentence) {
-  // if (sentence.includes("h")) {
-  //   console.log("true");
-  // // } else {
-  // //   return sentence.val();
-  //   }
-};
+function checkSentence(sentence) {
+  var wordArray = sentence.split(" "); //takes user input and splits into individual words
+  console.log(wordArray);
+  var latinSentence = ""; //creates a variable for the for loop
+  for (var i = 0; i < wordArray.length; i++) {
+    latinSentence = checkWord(wordArray[i])
+    latinSentence += " "; //adds space between each word
+    console.log(latinSentence);
+  }
+
+  return latinSentence
+}
 
 function checkWord(word) {
 //pig laten word stuff
-  word += "Poop"
+
   return word
 }
-
-function checkPhrase(phrase) {
-  var splitWords = phrase.split(" ");
-  var latinPhrase = "";
-  for (var i = 0; i < splitWords.length; i++) {
-    latinPhrase += checkWord(splitWords[i])
-    latinPhrase += " ";
-  }
-
-  return latinPhrase
-}
-
-
 
 
 // jQuery user interface logic here.
@@ -36,12 +25,12 @@ $(document).ready(function() {
     // var input = $("input#words").val();
     // console.log(input);
     // var result = translate(sentence);
-    var sentence = [];
-    var firstThree = [];
+    //var sentence = [];
+    //var firstThree = [];
 
 
 
-    var latin = checkPhrase($("input#words").val());
+    var latin = checkSentence($("input#words").val());
     console.log(latin);
     $(".words").text(latin);
     $("#output").show();
@@ -83,3 +72,14 @@ $(document).ready(function() {
     // $("#output").show();
   });
 });
+
+// var consonant = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
+var vowels = ["a", "e", "i", "o", "u"];
+var exceptions = ["qu"];
+var translate = function(sentence) {
+  // if (sentence.includes("h")) {
+  //   console.log("true");
+  // // } else {
+  // //   return sentence.val();
+  //   }
+};
