@@ -16,18 +16,27 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 
 ## Specs
 
-* _The program should return when a year is not a leap year._
-  * _Input Example: 1993_
-  * _Output Example: false_
-* _The program should return 'true' for years divisible by 4, since those are leap years._
-  * _Input Example: 2004_
-  * _Output Example: true_
-* _The program should return 'false' for years divisible by 100, since those are not leap years._
-  * _Input Example: 1900_
-  * _Output Example: false_
-* _The program should return 'true' for years divisible by 400, since those are leap years._
-  * _Input Example: 2000_
-  * _Output Example: true_
+* _The program does nothing to non-alphabetical characters, since they do not contain consonants or vowels._
+  * _Example Input: 3_
+  * _Example Output: 3_
+* _The program adds “ay” to single-letter words beginning with a vowel._
+  * _Example Input: i_
+  * _Example Output: iay_
+* _The program adds “ay” to single-letter words beginning with a vowel._
+  * _Example Input: i_
+  * _Example Output: iay_
+* _The program adds “say” to multi-letter words beginning with a vowel._
+  * _Example Input: egg_
+  * _Example Output: eggway_
+* _For words beginning with one or more consonants, the program moves all of the first consecutive consonants to the end, and adds “ay”._
+  * _Example Input: there_
+  * _Example Output: erethay_
+* _For words beginning consonants including with “qu”, the program moves all of the first consecutive consonants along with the “u” to the end, and adds “ay”._
+  * _Example Input: squeal_
+  * _Example Output: ealsquay_
+* _For words beginning with “y”, treat “y” as a consonant._
+  * _Example Input: yellow_
+  * _Example Output: ellowyay_
 
 ## Known Bugs
 
