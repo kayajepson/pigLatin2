@@ -22,16 +22,13 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 * _The program adds “ay” to single-letter words beginning with a vowel._
   * _Example Input: i_
   * _Example Output: iay_
-* _The program adds “ay” to single-letter words beginning with a vowel._
-  * _Example Input: i_
-  * _Example Output: iay_
-* _The program adds “say” to multi-letter words beginning with a vowel._
+* _The program adds “way” to multi-letter words beginning with a vowel._
   * _Example Input: egg_
   * _Example Output: eggway_
 * _For words beginning with one or more consonants, the program moves all of the first consecutive consonants to the end, and adds “ay”._
   * _Example Input: there_
   * _Example Output: erethay_
-* _For words beginning consonants including with “qu”, the program moves all of the first consecutive consonants along with the “u” to the end, and adds “ay”._
+* _For words beginning with consonants including “qu”, the program moves all of the first consecutive consonants along with the “u” to the end, and adds “ay”._
   * _Example Input: squeal_
   * _Example Output: ealsquay_
 * _For words beginning with “y”, treat “y” as a consonant._

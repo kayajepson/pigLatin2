@@ -1,26 +1,26 @@
-var leapYear = function(year) {
-  if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
+var consonant = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
+var vowels = ["a", "e", "i", "o", "u"];
+var exceptions = ["qu"];
+
+var translate = function(words) {
+  if ((sentence === ) {
     return true;
   } else {
-    return false;
-  }
+    return sentence.val();
+    }
 };
 
 // jQuery user interface logic here.
 $(document).ready(function() {
-  $("form#leap-year").submit(function(event) {
+  alert("beginning");
+  $("form#pigLatin").submit(function(event) {
     event.preventDefault();
-    var year = parseInt($("input#year").val());
-    var result = leapYear(year);
+    var sentence = $("input#words").val();
+    var output = translate(words);
 
-    $(".year").text(year);
+    $(".words").text(words);
 
-    if (!result) {                 // same as writing if (result === false)
-      $(".not").text("not");
-    } else {
-      $(".not").text("");
-    }
-
-    $("#result").show();
+    $("#output").show();
+    alert("end");
   });
 });
