@@ -17,8 +17,8 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 ## Specs
 
 * _The program should return when a year is not a leap year._
-  ..* _Input Example: 1993_
-  ..* _Output Example: false_
+  * _Input Example: 1993_
+  * _Output Example: false_
 * _The program should return 'true' for years divisible by 4, since those are leap years._
   ..* _Input Example: 2004_
   ..* _Output Example: true_
